@@ -1,0 +1,295 @@
+<!doctype html>
+<html lang="en" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0"
+    />
+    <title> Omar & Wafaa </title>
+    <link rel="stylesheet" href="main.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Cinzel+Decorative:wght@400;700&family=IM+Fell+English:ital@0;1&family=Amiri:ital,wght@0,400;0,700;1,400&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <!-- PAGE 1 · LOADING SCREEN -->
+    <section id="page-loading" class="page active">
+      <div class="loading-bg"></div>
+      <div class="particles" id="particles"></div>
+      <div class="loading-content">
+        <div class="crest-wrapper">
+          <div class="crest-glow"></div>
+          <img id="crest-img" class="crest-img" alt="Royal Crest" />
+        </div>
+        <div class="loading-bar-wrap">
+          <div class="loading-bar" id="loading-bar"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PAGE 2 · DOOR SCENE -->
+    <section id="page-door" class="page">
+      <div class="door-static-bg"></div>
+      <div class="door-bg-wrap">
+        <video
+          id="door-gif"
+          class="door-gif"
+          autoplay
+          muted
+          playsinline
+        ></video>
+        <div class="door-overlay" id="door-overlay"></div>
+        <div class="door-glow-ring" id="door-glow-ring"></div>
+      </div>
+      <div class="door-top-text">
+        <p class="door-pre en-text">Together with their families</p>
+        <p class="door-pre ar-text">بمشاركة عائلتيهما</p>
+        <p class="door-names-hero">
+          <span class="groom-name-en"></span>
+          <span class="amp-hero">&amp;</span>
+          <span class="bride-name-en"></span>
+        </p>
+        <p
+          class="door-names-hero ar-text"
+          style="font-family: &quot;Amiri&quot;, serif"
+        >
+          <span class="groom-name-ar"></span>
+          <span class="amp-hero">&amp;</span>
+          <span class="bride-name-ar"></span>
+        </p>
+        <p class="door-subtitle en-text">
+          invite you to open the door to their celebration
+        </p>
+        <p class="door-subtitle ar-text">يدعوانكم لفتح باب الاحتفال</p>
+      </div>
+      <button id="knock-btn" class="knock-btn" aria-label="Knock">
+        <span class="knock-emoji">🚪</span>
+        <span class="knock-label en-text">Knock</span>
+        <span class="knock-label ar-text">إطرق</span>
+      </button>
+      <div class="lang-toggle-wrap door-lang">
+        <button id="lang-btn-door" class="lang-btn">العربية / EN</button>
+      </div>
+    </section>
+
+    <!-- PAGE 3 · WEDDING DETAILS + RSVP -->
+    <section id="page-details" class="page">
+      <div class="details-bg"></div>
+      <div class="petals-wrap" id="petals"></div>
+
+      <div class="lang-toggle-wrap details-lang">
+        <button id="lang-btn-details" class="lang-btn">العربية / EN</button>
+      </div>
+
+      <!-- Hero Invitation Text -->
+      <div class="details-hero">
+        
+        <div class="hero-crest-mini">
+          <img id="hero-crest-img" alt="Crest" />
+        </div>
+        <p class="invite-pre en-text">
+          <br /><br /><br />Together with their families
+        </p>
+        <p class="invite-pre ar-text">بمشاركة عائلتيهما</p>
+        <div class="hero-names">
+          <span class="name-left en-text groom-name-en"></span>
+          <span class="name-left ar-text groom-name-ar"></span>
+          <span class="ampersand">&amp;</span>
+          <span class="name-right en-text bride-name-en"></span>
+          <span class="name-right ar-text bride-name-ar"></span>
+        </div>
+
+        <div class="couple-photos">
+          <img src="assets/images/cinema.jpg" class="photo photo-left">
+          <img src="assets/images/memories.jpeg" class="photo photo-right">
+        </div>
+
+        <p class="invite-body en-text">
+          They invite you to celebrate their engagement.
+        </p>
+        <p class="invite-body ar-text">يتشرفان بدعوتكم لحضور حفل خطوبتهما</p>
+        <div class="ornament-line">
+          <span></span>
+          <div class="diamond-sm">◆</div>
+          <span></span>
+        </div>
+        <p class="hero-event en-text">Engagement celebration</p>
+        <p class="hero-event ar-text">حفل خطوبتهما</p>
+      </div>
+
+      <!-- Event Detail Cards (كل معلومة في بطاقة منفصلة) -->
+      <div class="details-cards">
+        <!-- Date Card -->
+        <div class="detail-card" style="--delay: 0.1s">
+          <div class="card-icon">📅</div>
+          <div class="card-label en-text">Date</div>
+          <div class="card-label ar-text">التاريخ</div>
+          <div class="card-value en-text wedding-date-en"></div>
+          <div class="card-value ar-text wedding-date-ar"></div>
+        </div>
+
+        <div class="countdown-box">
+          <h3 class="en-text">Countdown To The Wedding 💍</h3>
+          <h3 class="ar-text">العد التنازلي لموعد الحفل  💍</h3>
+
+          <div id="countdown">
+            <div>
+              <span id="months">0</span>
+              <p class="en-text">Months</p>
+              <p class="ar-text">شهور</p>
+            </div>
+
+            <div>
+              <span id="days">0</span>
+              <p class="en-text">Days</p>
+              <p class="ar-text">أيام</p>
+            </div>
+
+            <div>
+              <span id="hours">0</span>
+              <p class="en-text">Hours</p>
+              <p class="ar-text">ساعات</p>
+            </div>
+
+            <div>
+              <span id="minutes">0</span>
+              <p class="en-text">Minutes</p>
+              <p class="ar-text">دقائق</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Time Card -->
+        <div class="detail-card" style="--delay: 0.2s">
+          <div class="card-icon">🕖</div>
+          <div class="card-label en-text">Time</div>
+          <div class="card-label ar-text">الوقت</div>
+          <div class="card-value wedding-time"></div>
+        </div>
+        <!-- Venue Card -->
+        <div class="detail-card" style="--delay: 0.3s">
+          <div class="card-icon">🏛️</div>
+          <div class="card-label en-text">Venue</div>
+          <div class="card-label ar-text">المكان</div>
+          <div class="card-value en-text wedding-location-en"></div>
+          <div class="card-value ar-text wedding-location-ar"></div>
+          <br /><br />
+          <a href="#" target="_blank" class="map-btn wedding-map-btn en-text"
+            >🗺 View Location</a
+          >
+          <a href="#" target="_blank" class="map-btn wedding-map-btn ar-text"
+            >🗺 عرض الموقع</a
+          >
+          <br />
+          <br />
+        </div>
+      </div>
+
+      <!-- Blessing Message -->
+      <div class="blessing-message">
+        <p>
+          يشرفنا حضوركم ومشاركتنا فرحة خطوبتنا، فبوجودكم تزداد سعادتنا وتكتمل فرحتنا 💍✨
+        </p>
+      </div>
+
+<footer class="footer">
+
+  <div class="ornament-line">
+    <span></span>
+    <div class="diamond-sm">◆</div>
+    <span></span>
+  </div>
+
+  <p class="display big">
+    Omar <em>&amp;</em> Wafaa
+  </p>
+
+  <p class="mono tiny">
+    26 . 11 . 2026
+  </p>
+
+  <div class="footer-branding">
+
+    <p class="mono tiny">
+      Created by <span>ENG_Ahmed Abo Rashed</span>
+    </p>
+
+    <div class="footer-socials">
+
+      <!-- Instagram -->
+      <a href="https://www.instagram.com/_eng_a7med_/"
+         target="_blank"
+         rel="noreferrer"
+         aria-label="Instagram">
+
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none"
+             stroke="currentColor" stroke-width="2"
+             stroke-linecap="round" stroke-linejoin="round">
+          <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+          <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+          <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+        </svg>
+
+      </a>
+
+      <!-- Facebook -->
+      <a href="https://www.facebook.com/share/18qvNBE9z2/"
+         target="_blank"
+         rel="noreferrer"
+         aria-label="Facebook">
+
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none"
+             stroke="currentColor" stroke-width="2"
+             stroke-linecap="round" stroke-linejoin="round">
+          <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path>
+        </svg>
+
+      </a>
+
+      <!-- TikTok -->
+      <a href="https://www.tiktok.com/@ar_sysworks"
+         target="_blank"
+         rel="noreferrer"
+         aria-label="TikTok">
+
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none"
+             stroke="currentColor" stroke-width="2"
+             stroke-linecap="round" stroke-linejoin="round">
+          <path d="M9 12a4 4 0 1 0 4 4V4a5 5 0 0 0 5 5v3a3 3 0 0 1-3-3"></path>
+        </svg>
+
+      </a>
+
+      <!-- WhatsApp -->
+      <a href="https://wa.me/201020084862"
+         target="_blank"
+         rel="noreferrer"
+         aria-label="WhatsApp">
+
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none"
+             stroke="currentColor" stroke-width="2"
+             stroke-linecap="round" stroke-linejoin="round">
+          <path d="M21 11.5a8.38 8.38 0 0 1-1.9 5.4
+                   8.5 8.5 0 0 1-7.6 2.7L3 21l1.4-8.3
+                   a8.5 8.5 0 1 1 16.6-1.2z"></path>
+          <path d="M8 10s1.5 3 4 4 4-1 4-1"></path>
+        </svg>
+
+      </a>
+
+    </div>
+
+  </div>
+
+</footer>
+
+      
+    </section>
+
+    <audio id="bg-music" loop></audio>
+    <script src="script.js"></script>
+  </body>
+</html>
